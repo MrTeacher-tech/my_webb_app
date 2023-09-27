@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <% include('../partials/header') %>
+</header>
+<body>
+    <h1>Editable Table</h1>
+    <h2>My name is <%= name %></h2>
+
+<table id="editableTable">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td contenteditable="true" id="nameCell">John</td>
+        <td contenteditable="true" id="emailCell">john@example.com</td>
+    </tr>
+    <!-- Add more rows as needed -->
+</table>
+
+<script>
+    // JavaScript variables to store initial values
+    const initialName = 'John';
+    const initialEmail = 'john@example.com';
+
+    // Set initial values in the editable cells
+    document.getElementById('nameCell').textContent = initialName;
+    document.getElementById('emailCell').textContent = initialEmail;
+</script>
+
+
+    <button id="saveButton">Save Changes</button>
+
+    <script src="server.js"></script>
+</body>
+</html>
